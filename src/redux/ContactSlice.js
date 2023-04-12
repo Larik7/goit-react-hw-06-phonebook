@@ -8,11 +8,10 @@ const contactsSlice = createSlice({
       reducer(state, action) {
         state.push(action.payload);
       },
-      prepare(name, number) {
+      prepare(contacts) {
         return {
           payload: {
-            name,
-            number,
+            ...contacts,
             id: nanoid(),
           },
         };
@@ -24,6 +23,6 @@ const contactsSlice = createSlice({
     },
   },
 });
-// Експортуємо генератори екшенів та редюсер
+
 export const { addContact, deleteContact, } = contactsSlice.actions;
 export const contactsReducer = contactsSlice.reducer;
