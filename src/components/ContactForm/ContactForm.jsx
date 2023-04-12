@@ -66,7 +66,7 @@ export const ContactForm = () => {
             <Field name="number" type="tel"/>
             <ErrorMessage name="number" component="span"/>
         </FormField>
-            <SubmitBtn type="submit" onSubmit={handleSubmit}>
+            <SubmitBtn type="submit">
                 <span>Add contact</span>
             </SubmitBtn>
       </Form>
